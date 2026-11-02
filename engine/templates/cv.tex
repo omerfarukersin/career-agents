@@ -1,0 +1,72 @@
+% ATS-friendly one-column CV. Writers copy this file into the job folder and replace the content.
+% Rules: single column, no tables for layout, no icons/images, real text (glyphtounicode) so ATS can parse.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt,label=\textbullet}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{-6pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% \entry{Title}{Dates}{Organisation}{Location}
+\newcommand{\entry}[4]{\textbf{#1} \hfill #2\\ \textit{#3} \hfill \textit{#4}\par}
+
+\begin{document}
+
+%% ---------- HEADER ----------
+{\centering
+{\LARGE\bfseries FULL NAME}\\[3pt]
+City, Country \;|\; +00 00 000 0000 \;|\; \href{mailto:email@example.com}{email@example.com}\\
+\href{https://linkedin.com/in/handle}{linkedin.com/in/handle} \;|\; \href{https://github.com/handle}{github.com/handle}\par}
+
+%% ---------- PROFILE (2–3 lines, tailored to the role) ----------
+\section{Profile}
+Tailored summary that names the role family and the 2--3 strongest matches to this job's must-haves.
+
+%% ---------- EDUCATION ----------
+\section{Education}
+\entry{MSc Degree Title}{MMM YYYY -- MMM YYYY (expected)}{University, School}{City, Country}
+\begin{itemize}
+  \item Relevant modules: chosen to match the job's keywords.
+\end{itemize}
+
+\vspace{4pt}
+\entry{BSc Degree Title}{YYYY -- YYYY}{University}{City, Country}
+\begin{itemize}
+  \item GPA / capstone / quantitative courses relevant to the role.
+\end{itemize}
+
+%% ---------- EXPERIENCE ----------
+\section{Experience}
+\entry{Role Title}{MMM YYYY -- MMM YYYY}{Organisation}{City}
+\begin{itemize}
+  \item Action verb + what you did + tool/method + result (number if true).
+\end{itemize}
+
+%% ---------- PROJECTS ----------
+\section{Projects}
+\textbf{Project name} \textit{-- Python, SQL} \hfill YYYY
+\begin{itemize}
+  \item Problem, method, outcome.
+\end{itemize}
+
+%% ---------- SKILLS ----------
+\section{Skills}
+\textbf{Analytics \& Programming:} Python, SQL \\
+\textbf{BI \& Tools:} Tableau, Git \\
+\textbf{Languages:} English (fluent), Language (level)
+
+%% ---------- OPTIONAL: Work authorisation line, only if me/profile.md provides wording ----------
+
+\end{document}

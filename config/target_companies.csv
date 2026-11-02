@@ -1,0 +1,21 @@
+company,sector,careers_url,ats,ats_slug,grad_programme,priority,notes
+Accenture,Consulting,https://accenture.pinpointhq.com/graduate-programmes-ireland,pinpoint,accenture,yes,medium,
+Deloitte,Consulting / Big 4,https://deloitteie.wd3.myworkdayjobs.com/en-US/Early_Careers,workday,deloitteie/Early_Careers,yes,medium,
+Microsoft,Tech,https://apply.careers.microsoft.com/careers,eightfold,microsoft.com,yes,medium,
+Salesforce,Tech,https://salesforce.wd12.myworkdayjobs.com/External_Career_Site,workday,salesforce/External_Career_Site,yes,medium,
+Workday,Tech,https://workday.wd5.myworkdayjobs.com/Workday,workday,workday/Workday,yes,medium,
+HubSpot,Tech,https://www.hubspot.com/careers,greenhouse,hubspotjobs,yes,medium,
+Stripe,Tech / Fintech,https://stripe.com/jobs,greenhouse,stripe,no,medium,
+Intercom,Tech,https://fin.ai/careers,greenhouse,intercom,no,medium,
+Amazon,Tech / Operations,https://www.amazon.jobs/en/search?normalized_country_code[]=IRL,amazon,search.json?normalized_country_code[]=IRL,yes,medium,
+Fenergo,Fintech / AI,,workable,fenergocareers,yes,medium,
+Wayflyer,Fintech,,ashby,wayflyer,no,medium,
+Tines,Tech / AI automation,,greenhouse,tines,no,medium,
+Version 1,Tech consulting,,smartrecruiters,Version1,yes,medium,
+Workhuman,Tech,,ashby,workhuman,no,medium,
+Pinterest,Tech,,greenhouse,pinterest,no,medium,
+Okta,Tech,,greenhouse,okta,no,medium,
+OpenAI,AI,,ashby,openai,no,medium,
+Oracle,Tech,https://www.oracle.com/careers/students-grads/,oracle,CX_45001,yes,medium,
+Google,Tech,https://www.google.com/about/careers/applications/jobs/results/?location=Ireland,,,yes,medium,no public API; results pages are plain HTML
+Meta,Tech,https://www.metacareers.com/jobs,,,yes,medium,careers site is JS-only; check manually

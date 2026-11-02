@@ -1,0 +1,100 @@
+% ATS-friendly one-column CV. Tailored for: Graduate Data Analyst, Harbourline Energy (fictional), ref HL-GDA-27.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt,label=\textbullet}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{-6pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% \entry{Title}{Dates}{Organisation}{Location}
+\newcommand{\entry}[4]{\textbf{#1} \hfill #2\\ \textit{#3} \hfill \textit{#4}\par}
+
+\begin{document}
+
+%% ---------- HEADER ----------
+{\centering
+{\LARGE\bfseries Alex Quinn}\\[3pt]
+Dublin, Ireland \,|\, +353 00 000 0000 \,|\, \href{mailto:alex.quinn@example.com}{alex.quinn@example.com}\\
+\href{https://linkedin.com/in/example}{linkedin.com/in/example} \,|\, \href{https://github.com/example}{github.com/example}\par}
+
+%% ---------- PROFILE ----------
+\section{Profile}
+Economics graduate (First Class Honours) completing an MSc in Data Analytics, applying for the Graduate Data Analyst programme. Writes SQL and Python to automate recurring reports, built a Tableau dashboard for an operations manager's weekly site meeting, and is writing an MSc thesis on demand forecasting.
+
+%% ---------- EDUCATION ----------
+\section{Education}
+\entry{MSc Data Analytics}{Sep 2026 -- Aug 2027 (expected)}{Shannon University}{Limerick, Ireland}
+\begin{itemize}
+  \item Thesis (in progress): forecasting weekly retail demand from point-of-sale data.
+  \item Modules: Data Management and SQL; Statistical Modelling; Data Visualisation; Machine Learning for Business; Analytics Consulting Project.
+\end{itemize}
+
+\vspace{4pt}
+\entry{BA Economics (Honours), First Class Honours (1.1)}{Sep 2022 -- May 2026}{Shannon University}{Limerick, Ireland}
+\begin{itemize}
+  \item Modules: Econometrics (1.1); Statistics for Economists; Energy and Environmental Economics.
+\end{itemize}
+
+%% ---------- EXPERIENCE ----------
+\section{Experience}
+\entry{Data Intern}{Jul 2025 -- Sep 2025}{CityWorks Facilities}{Dublin, Ireland}
+\begin{itemize}
+  \item Automated the weekly response-time report with SQL and a Python (pandas) script, cutting build time from about half a day to a few minutes; checked it against three past reports before switching.
+  \item Wrote SQL against a maintenance-ticket database (about 40,000 tickets a year) to report service performance by site.
+  \item Built a Tableau dashboard of response times for 12 sites for the main stakeholder, the operations manager, used in the weekly site meeting.
+  \item Traced implausibly good response times at two sites to a data-quality fault: duplicate tickets from the logging form. Wrote a rule to flag them so the dashboard showed corrected figures, and passed the form issue to IT.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Treasurer}{Sep 2024 -- May 2025}{Shannon University Economics Society}{Limerick, Ireland}
+\begin{itemize}
+  \item Managed an annual budget of about \texteuro6,000 and reported spending to the committee each month; the year closed within budget.
+  \item Secured two conference sponsors by pitching a one-page attendance plan to five local firms.
+\end{itemize}
+
+%% ---------- PROJECTS ----------
+\section{Projects}
+\textbf{Public-transport fare elasticity} \textit{(final-year project, graded 1.1) -- Python, statsmodels, Git} \hfill 2025--26
+\begin{itemize}
+  \item Combined two years of monthly ridership open data with fare and fuel-price series; estimated price elasticity of demand with OLS regression, controlling for season and fuel prices.
+  \item Found demand inelastic (about $-0.3$); wrote up the method and its limits for a non-technical reader.
+\end{itemize}
+
+%% ---------- SKILLS ----------
+\section{Skills}
+\textbf{Data \& programming:} SQL, Python (pandas, statsmodels), regression and statistical modelling, Git \\
+\textbf{Data visualisation:} Tableau \\
+\textbf{Languages:} English (native), Irish (conversational), French (B1) \\
+\textbf{Work authorisation:} Irish citizen; no sponsorship required. Available from September 2027. \\
+\textbf{Interests:} five-a-side football, sea swimming
+
+\end{document}
+
+% EVIDENCE:
+% Header contact -> me/profile.md (Contact)
+% Profile: First Class Honours, MSc Data Analytics, thesis -> me/profile.md (Education); SQL/Python automation, Tableau weekly meetings -> me/experience/2025_internship_cityworks.md
+% MSc dates, thesis, modules -> me/profile.md (Education)
+% BA, grade, modules (Econometrics 1.1) -> me/profile.md (Education)
+% Intern bullet 1 (half a day -> few minutes, approx.; three past reports) -> me/experience/2025_internship_cityworks.md; me/stories.md #1
+% Intern bullet 2 (40,000 tickets a year, response times by site) -> me/experience/2025_internship_cityworks.md
+% Intern bullet 3 (Tableau, 12 sites, weekly site meeting) -> me/experience/2025_internship_cityworks.md
+% Intern bullet 4 (duplicate tickets, flag rule, corrected figures, passed to IT) -> me/stories.md #2; me/experience/2025_internship_cityworks.md
+% Intern dates Jul 2025 - Sept 2025, Dublin -> me/experience/2025_internship_cityworks.md
+% Treasurer (about EUR 6,000, monthly reporting, within budget) -> me/experience/2024_society_treasurer.md
+% Treasurer location Limerick -> inferred from university location in me/profile.md
+% Sponsors (two of five firms, one-page plan) -> me/stories.md #3; me/experience/2024_society_treasurer.md
+% Fare project (monthly data, OLS, season and fuel controls, -0.3, graded 1.1, non-technical write-up, Git) -> me/experience/2026_project_fare-elasticity.md
+% Skills -> me/profile.md (Technical skills); never-list items (SAS, Scala) excluded; Power BI not in career bank, excluded
+% Languages, work authorisation wording, interests -> me/profile.md

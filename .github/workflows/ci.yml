@@ -1,0 +1,37 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pypdf
+      - name: Privacy check
+        run: python3 engine/scripts/privacy_check.py
+      - name: Scripts compile
+        run: |
+          python3 -m py_compile engine/scripts/*.py
+          bash -n engine/scripts/*.sh
+      - name: Workspace init works on a clean checkout
+        run: |
+          bash engine/scripts/init_workspace.sh
+          test -f me/profile.md && test -f tracker/tracker.csv && test -f CHANGELOG.md
+
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build templates and demo PDFs
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            engine/templates/cv.tex
+            engine/templates/cover_letter.tex
+            examples/demo/jobs/Harbourline-Energy/2026-11-02_Graduate-Data-Analyst/cv.tex
+            examples/demo/jobs/Harbourline-Energy/2026-11-02_Graduate-Data-Analyst/cover_letter.tex
+          work_in_root_file_dir: true

@@ -1,0 +1,17 @@
+# Personal workspace: never published
+/me/
+/jobs/
+/tracker/
+/inbox/
+/CHANGELOG.md
+/.privacy-terms
+
+# Build and OS files
+*.aux
+*.log
+*.out
+*.buildlog
+*.synctex.gz
+__pycache__/
+.DS_Store
+.claude/settings.local.json

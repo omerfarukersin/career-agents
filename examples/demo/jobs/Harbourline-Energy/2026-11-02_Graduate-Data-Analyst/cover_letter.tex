@@ -1,0 +1,58 @@
+% One-page cover letter. Graduate Data Analyst, Harbourline Energy (fictional), ref HL-GDA-27.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\begin{document}
+
+{\Large\bfseries\color{accent} Alex Quinn}\\
+Dublin, Ireland \;|\; +353 00 000 0000 \;|\; \href{mailto:alex.quinn@example.com}{alex.quinn@example.com} \;|\; \href{https://linkedin.com/in/example}{linkedin.com/in/example}
+
+\vspace{10pt}
+2 November 2026
+
+Customer Insights Team\\
+Harbourline Energy\\
+Dublin
+
+\textbf{Re: Graduate Data Analyst (Ref: HL-GDA-27)}
+
+Dear Hiring Team,
+
+Your posting says Harbourline Energy is investing in smart-meter data to help customers cut their energy use. That line is why I am applying for the Graduate Data Analyst programme. My economics degree included a module in Energy and Environmental Economics, and my MSc thesis is on demand forecasting, using weekly point-of-sale data from retail rather than meter readings. I would like to bring that work to your Customer Insights team.
+
+Most of the role is reporting, which is what I did as a data intern at CityWorks Facilities. Their weekly response-time report took about half a day to build by hand. I rebuilt it as SQL queries and a Python script, and checked the output against three past reports before switching, so the operations manager saw exactly the tables they were used to. It ran in a few minutes and went into the weekly meeting unchanged. I also built the Tableau dashboard of response times for 12 sites that the same meeting used.
+
+You also ask for someone careful with detail. Before the figures went into that dashboard, I noticed that response times at two sites looked far too good. The cause was the logging form, which was creating duplicate tickets. I wrote a rule to flag them, so the dashboard showed corrected figures, and passed the form problem to IT. It taught me to check any number that looks too good.
+
+Economics is the other half of what I offer. For my final-year project, graded 1.1, I estimated how public-transport demand responded to a fare cut, using OLS regression on two years of monthly data, and wrote up the result and its limits for readers without a statistics background. Your analysts present to pricing as well as operations, and that project was a pricing question answered in plain terms. As treasurer of the Economics Society I also managed a budget of about \texteuro6,000 and reported spending to the committee every month.
+
+I finish my MSc in August 2027 and am available from September 2027 (Irish citizen; no sponsorship required). Thank you for reading my application. I would be glad to talk it through.
+
+Kind regards,\\
+Alex Quinn
+
+\end{document}
+
+% EVIDENCE:
+% Smart-meter investment, Customer Insights team, two-year programme, analysts present to pricing/operations -> jobs/Harbourline-Energy/company.md (from job.md posting)
+% Energy and Environmental Economics module -> me/profile.md (BA Economics modules)
+% MSc thesis: forecasting weekly retail demand from point-of-sale data (in progress) -> me/profile.md
+% Weekly report: half a day by hand, SQL + Python, checked against three past reports, few minutes, used unchanged -> me/stories.md #1; me/experience/2025_internship_cityworks.md
+% Tableau dashboard, 12 sites, weekly meeting -> me/experience/2025_internship_cityworks.md
+% Duplicate tickets: two sites, too good, logging form, flag rule, corrected figures, passed to IT -> me/stories.md #2
+% "It taught me to check any number that looks too good" -> me/stories.md #2 (Lesson)
+% Fare project: OLS, two years monthly data, fare cut, write-up for non-technical reader, graded 1.1 -> me/experience/2026_project_fare-elasticity.md; me/profile.md
+% Treasurer: about EUR 6,000, monthly reporting to committee -> me/experience/2024_society_treasurer.md
+% MSc end Aug 2027 -> me/profile.md (Education); "Available from September 2027", "Irish citizen; no sponsorship required." -> me/profile.md (Work authorisation)
+% Letter date: drafting date (demo run)
